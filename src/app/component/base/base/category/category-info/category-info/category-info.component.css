@@ -1,0 +1,31 @@
+p {
+    font-family: Lato;
+  }
+  .fill-remaining{
+    background-color: rgb(38, 38, 55);
+  }
+  .fill-remaining-space {
+    /* This fills the remaining space, by using flexbox. 
+       Every toolbar row uses a flexbox row layout. */
+    flex: 1 1 auto;
+  }
+  
+  .container {
+    padding: 10px;
+  }
+  
+  .form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+    color: white;
+  }
+  
+  .form-element {
+    padding: 5px 0px 25px 40px;
+    width: 100%;
+  }
+  
+  .button {
+    width: 100%;
+  }

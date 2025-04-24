@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-
+import { RouterModule} from '@angular/router';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { AdminLayoutComponent } from './Layout/admin-layout/admin-layout/admin-layout.component';
+import { ToolbarComponent } from './Layout/toolbar/toolbar.component';
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [MatSlideToggleModule,AdminLayoutComponent , RouterModule, ToolbarComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

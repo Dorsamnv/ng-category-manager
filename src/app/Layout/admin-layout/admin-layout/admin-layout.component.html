@@ -1,0 +1,14 @@
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="side" [opened]="showSidenav">
+    <h1 class="sidebar-title">Management Panel</h1>
+    <app-sidebar-menu></app-sidebar-menu>
+  </mat-drawer>
+
+  <div class="example-sidenav-content">
+    <app-toolbar class="example-spacer" (sideNavToggle)="toggleSidebar()"></app-toolbar>
+   <div class="main-content">
+     <router-outlet></router-outlet>
+   </div>
+  </div>
+
+</mat-drawer-container>

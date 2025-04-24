@@ -1,0 +1,14 @@
+.active-item{
+    color: rgb(0, 107, 107)
+}
+.main-menu li a{
+    text-decoration: none;
+    color: white;
+    padding: 2px;
+}
+.main-menu li a:hover{
+    color:rgb(82, 215, 175);
+}
+.main-menu li a:active{
+    color: rgb(131, 131, 208);
+}

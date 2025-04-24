@@ -1,0 +1,17 @@
+<ul class="main-menu">
+    @for(item of menuItems; track getTrackById($index, item)) {
+      <li>
+        <a [routerLink]="item.path" routerLinkActive="active-item">{{ item.title }}</a>
+        <ul>
+          @if(item.children.length > 0) {
+            @for(subItem of item.children; track getTrackById($index, subItem)) {
+              <li>
+                <a [routerLink]="subItem.path" routerLinkActive="active-item">{{ subItem.title }}</a>
+              </li>
+            }
+          }
+        </ul>
+      </li>
+    }
+  </ul>
+  
