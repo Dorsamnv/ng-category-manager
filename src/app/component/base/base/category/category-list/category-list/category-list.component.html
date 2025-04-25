@@ -1,0 +1,7 @@
+<h2>Category List</h2>
+<ul>
+    @for (item of categories; track $index) {
+        <li>{{item.name}}</li>
+    }
+</ul>
+<router-outlet></router-outlet>

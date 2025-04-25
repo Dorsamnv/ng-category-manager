@@ -1,2 +1,12 @@
-<app-admin-layout></app-admin-layout>
-<app-toolbar></app-toolbar>
+@if (isAuthenticated) {
+    <ng-container>
+        <app-admin-layout></app-admin-layout>
+        <app-toolbar></app-toolbar>
+    </ng-container>
+    <router-outlet></router-outlet>
+}
+@else {
+    <app-login></app-login>
+}
+
+<router-outlet></router-outlet>

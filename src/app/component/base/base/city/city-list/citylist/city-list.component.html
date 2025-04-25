@@ -1,2 +1,9 @@
 <p>city-list works!</p>
 <router-outlet></router-outlet>
+<ul>
+    @for(city of cities; track getTrackById)
+    {
+        <li>{{city.cityName}}</li>
+    }
+</ul>
+<h3 appHighlight="rgb(18,18,56)">Date : {{CurrentDate | dateFormat }} </h3>
