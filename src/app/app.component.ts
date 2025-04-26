@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 import { NgIf } from '@angular/common';
 @Component({
   selector: 'app-root',
-  imports: [MatSlideToggleModule, AdminLayoutComponent, RouterModule, ToolbarComponent, LoginComponent, NgIf],
+  imports: [MatSlideToggleModule,RouterModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

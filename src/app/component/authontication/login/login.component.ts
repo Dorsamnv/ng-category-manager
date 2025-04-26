@@ -7,12 +7,12 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCheckbox, MatCheckboxModule } from '@angular/material/checkbox';
 import { NgClass, NgIf } from '@angular/common';
 import { AuthenticatedService } from '../../../services/authenticate.service';
-import { json } from 'stream/consumers';
 import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-login',
-  imports: [MatButtonModule,MatCardModule,MatFormFieldModule,MatInputModule,MatCheckboxModule,MatCheckbox,ReactiveFormsModule,NgIf],
+  imports: [MatButtonModule,MatCardModule,MatFormFieldModule,MatInputModule,MatCheckboxModule,ReactiveFormsModule,NgIf],
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
@@ -22,7 +22,7 @@ export class LoginComponent {
   constructor(
     private fb: FormBuilder,
     private authService: AuthenticatedService,
-    private router: Router  // ✅ باید حتماً Router رو اینجا inject کنی
+    private router: Router  
   ) {
     this.loginForm = this.fb.group({
       username: ['emilys', Validators.required],
@@ -48,6 +48,7 @@ export class LoginComponent {
         },
         error: (error) => {
           console.error('Login failed:', error.error?.message || error.message);
+          alert('Login Failed! Please Check Your Username or Password!')
         }
       });
     }

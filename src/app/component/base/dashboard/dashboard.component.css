@@ -1,0 +1,112 @@
+.dashboard-modern {
+    padding: 40px;
+    background: linear-gradient(135deg, #546473, #dadbdd);
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 10px;
+  }
+  
+  .welcome-box {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .welcome-box h1 {
+    font-size: 36px;
+    color: #2a4365;
+    margin-bottom: 10px;
+  }
+  
+  .welcome-box p {
+    font-size: 18px;
+    color: #4a5568;
+  }
+  
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+  }
+  
+  .stat-card {
+    background: white;
+    border-radius: 16px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+  }
+  
+  .stat-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .stat-icon {
+    font-size: 40px;
+    margin-right: 20px;
+  }
+  
+  .products {
+    color: #4FD1C5;
+  }
+  
+  .categories {
+    color: #667EEA;
+  }
+  
+  .users {
+    color: #F6AD55;
+  }
+  
+  .revenue {
+    color: #FC8181;
+  }
+  
+  .stat-info h3 {
+    font-size: 20px;
+    margin: 0;
+    color: #2a4365;
+  }
+  
+  .stat-info p {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 5px;
+    color: #1a202c;
+  }
+  
+  .actions {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .primary-btn, .secondary-btn {
+    padding: 12px 24px;
+    margin: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .primary-btn {
+    background: #667EEA;
+    color: white;
+  }
+  
+  .primary-btn:hover {
+    background: #5a67d8;
+  }
+  
+  .secondary-btn {
+    background: white;
+    color: #4a5568;
+    border: 2px solid #cbd5e0;
+  }
+  
+  .secondary-btn:hover {
+    background: #edf2f7;
+  }
+  

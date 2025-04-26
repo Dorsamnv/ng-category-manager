@@ -1,7 +1,29 @@
-<h2>Category List</h2>
-<ul>
-    @for (item of categories; track $index) {
-        <li>{{item.name}}</li>
+<div class="search-container">
+    <input 
+      type="text" 
+      [(ngModel)]="searchText" 
+      placeholder="Search for a category..." 
+      class="search-input"
+    >
+  </div>
+
+<table border="1" width="100%" style="border-collapse: collapse; text-align: center; margin-top: 20px;">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Updated At</th>
+      <th>Slug</th>
+    </tr>
+  </thead>
+  <tbody class="table">
+    @for (item of filteredCategories; track $index) {
+      <tr>
+        <td>{{ item.id }}</td>
+        <td>{{ item.name }}</td>
+        <td>{{ item.updatedAt }}</td>
+        <td>{{ item.slug }}</td>
+      </tr>
     }
-</ul>
-<router-outlet></router-outlet>
+  </tbody>
+</table>
