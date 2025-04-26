@@ -1,12 +1,9 @@
-@if (isAuthenticated) {
-    <ng-container>
+
+
+
+    <!-- <ng-content *ngIf="isAuthenticated" else login>
         <app-admin-layout></app-admin-layout>
         <app-toolbar></app-toolbar>
-    </ng-container>
+    </ng-content>
+    <app-login></app-login> -->
     <router-outlet></router-outlet>
-}
-@else {
-    <app-login></app-login>
-}
-
-<router-outlet></router-outlet>

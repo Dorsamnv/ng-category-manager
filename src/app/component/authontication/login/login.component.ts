@@ -40,8 +40,11 @@ export class LoginComponent {
       this.authService.login(formData).subscribe({
         next: (result) => {
           console.log('Login Success:', result);
-          localStorage.setItem('token', result.token);
-          this.router.navigate(['/dashboard']);
+          localStorage.setItem('token', result.accessToken);
+          this.router.navigateByUrl('/', { skipLocationChange: true }).then(() => {
+            this.router.navigate(['/dashboard']);
+          });
+          
         },
         error: (error) => {
           console.error('Login failed:', error.error?.message || error.message);
@@ -49,5 +52,4 @@ export class LoginComponent {
       });
     }
   }
-  
-}  
+}

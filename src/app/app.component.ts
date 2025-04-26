@@ -6,10 +6,10 @@ import { ToolbarComponent } from './Layout/toolbar/toolbar.component';
 import { LoginComponent } from "./component/authontication/login/login.component";
 import { AuthenticatedService } from './services/authenticate.service';
 import { Router } from '@angular/router';
-
+import { NgIf } from '@angular/common';
 @Component({
   selector: 'app-root',
-  imports: [MatSlideToggleModule, AdminLayoutComponent, RouterModule, ToolbarComponent, LoginComponent],
+  imports: [MatSlideToggleModule, AdminLayoutComponent, RouterModule, ToolbarComponent, LoginComponent, NgIf],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -20,11 +20,15 @@ export class AppComponent implements OnInit {
   constructor(private authService: AuthenticatedService,private router: Router , private route: ActivatedRoute) {}
 
   ngOnInit(): void {
-    // this.route.queryParams.subscribe(params => {
-    //   if (params['token']) {
-    //     localStorage.setItem('token', params['token']);
+
+    this.route.queryParams.subscribe(params => {
+      if (params['token']) {
+        localStorage.setItem('token', params['token']);
         
-    //   }
-    // });
+      }
+    });
+    this.authService.isAuthenticated().subscribe((isAuthenticated) => {
+      this.isAuthenticated = isAuthenticated;
+    });
   }
 }

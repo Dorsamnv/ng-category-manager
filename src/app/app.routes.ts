@@ -1,11 +1,20 @@
 import { Routes } from '@angular/router';
-import { DashboardComponent } from './component/dashboard/dashboard/dashboard.component';
-import { AuthenticatedService } from './services/authenticate.service';
 import { LoginComponent } from './component/authontication/login/login.component';
 import { AuthGuard } from './guard/auth.guard';
+import { DashboardComponent } from './component/base/dashboard/dashboard.component';
+import { AdminLayoutComponent } from './Layout/admin-layout/admin-layout/admin-layout.component';
+
 export const routes: Routes = [
-  { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
-  { path: 'dashboard', component: DashboardComponent},
-  { path: 'base', loadChildren: () => import('./component/base/base/base.module').then(m => m.BaseModule) }
+
+  { 
+    path: '', 
+    component: AdminLayoutComponent,
+    canActivate: [AuthGuard],  
+    children: [
+      { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+      { path: 'dashboard', component: DashboardComponent }, 
+      { path: 'base', loadChildren: () => import('./component/base/base/base.module').then(m => m.BaseModule) }
+    ]
+  }
 ];

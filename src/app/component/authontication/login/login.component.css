@@ -73,36 +73,3 @@
     background-color: rgba(42, 158, 173, 0.1);
   }
   
-  /* Form fields */
-  mat-form-field {
-    width: 100%;
-  }
-  
-  mat-form-field ::ng-deep .mat-form-field-wrapper {
-    margin-bottom: -1.25em;
-  }
-  
-  mat-form-field ::ng-deep .mat-form-field-outline {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 4px;
-  }
-  
-  mat-form-field ::ng-deep .mat-form-field-outline-thick {
-    color: #a5b9e3;
-  }
-  
-  mat-form-field ::ng-deep .mat-form-field-label {
-    color: #a5b9e3;
-  }
-  
-  mat-form-field ::ng-deep .mat-input-element {
-    color: #ffffff;
-  }
-  
-  /* Error messages */
-  mat-error {
-    color: #ff6b6b;
-    font-size: 12px;
-    margin-top: 4px;
-  }
-  
